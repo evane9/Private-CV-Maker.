@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro CV Maker</title>
+    <title>CV Pro - evane9</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <div class="controls">
+    <div class="top-bar">
         <button onclick="toggleLanguage()" id="langBtn"><i class="fas fa-language"></i> EN</button>
         <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
     </div>
 
     <div class="container">
-        <h1 id="title"><i class="fas fa-file-invoice"></i> صانع السيرة الذاتية</h1>
+        <h1><i class="fas fa-file-invoice"></i> صانع السيرة الذاتية</h1>
         
-        <div class="color-picker">
-            <span id="themeText">اختر اللون:</span>
+        <div class="options-group">
+            <p id="themeText">اللون والنموذج:</p>
             <div class="colors">
                 <div class="color-dot active" style="background: #27ae60;" onclick="changeTheme('#27ae60', this)"></div>
                 <div class="color-dot" style="background: #2980b9;" onclick="changeTheme('#2980b9', this)"></div>
                 <div class="color-dot" style="background: #e74c3c;" onclick="changeTheme('#e74c3c', this)"></div>
                 <div class="color-dot" style="background: #f1c40f;" onclick="changeTheme('#f1c40f', this)"></div>
             </div>
-        </div>
-
-        <div class="template-picker">
-            <span id="tempText">شكل السيرة:</span>
             <div class="templates">
                 <button type="button" class="temp-btn active" id="btnClassic" onclick="setTemplate('classic', this)">كلاسيكي</button>
                 <button type="button" class="temp-btn" id="btnModern" onclick="setTemplate('modern', this)">حديث</button>
@@ -37,17 +33,16 @@
         </div>
 
         <form id="cvForm">
-            <div class="photo-upload">
+            <div class="photo-section">
                 <label for="photoInput" id="photoLabel">
-                    <i class="fas fa-images"></i>
-                    <span id="photoText">اختر صورة من المعرض</span>
+                    <i class="fas fa-image"></i> <span id="photoText">صورة شخصية</span>
                 </label>
                 <input type="file" id="photoInput" accept="image/*" hidden>
             </div>
             <div class="input-box"><i class="fas fa-user"></i><input type="text" id="name" placeholder="الاسم الكامل" required></div>
             <div class="input-box"><i class="fas fa-briefcase"></i><input type="text" id="job" placeholder="المسمى الوظيفي" required></div>
             <div class="input-box"><i class="fas fa-envelope"></i><input type="email" id="email" placeholder="البريد الإلكتروني" required></div>
-            <div class="input-box"><i class="fas fa-pen-nib"></i><textarea id="about" placeholder="نبذة عنك" rows="4"></textarea></div>
+            <div class="input-box"><i class="fas fa-pen"></i><textarea id="about" placeholder="نبذة عنك" rows="3"></textarea></div>
             <button type="submit" id="submitBtn"><i class="fas fa-download"></i> تحميل PDF</button>
         </form>
     </div>
