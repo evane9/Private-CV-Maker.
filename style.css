@@ -1,48 +1,25 @@
-:root { 
-    --bg: #f0f2f5; --card: #ffffff; --text: #333; --primary: #27ae60; --input-bg: #fff; --border: #ddd;
-}
-[data-theme="dark"] { 
-    --bg: #121212; --card: #1e1e1e; --text: #f0f0f0; --input-bg: #2d2d2d; --border: #444;
-}
+:root { --bg: #f4f7f6; --card: #ffffff; --text: #2d3436; --primary: #27ae60; --input-bg: #fff; }
+[data-theme="dark"] { --bg: #121212; --card: #1e1e1e; --text: #dfe6e9; --input-bg: #2d2d2d; }
 
-body { 
-    background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    transition: 0.3s; display: flex; flex-direction: column; align-items: center; padding: 20px; direction: rtl; 
-}
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; transition: 0.3s; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.top-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+.top-bar button { padding: 10px 15px; border-radius: 12px; border: none; background: var(--primary); color: white; cursor: pointer; font-weight: bold; }
 
-.container { 
-    background: var(--card); padding: 25px; border-radius: 20px; width: 100%; max-width: 420px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-}
+.container { background: var(--card); padding: 30px; border-radius: 20px; width: 100%; max-width: 400px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+h1 { font-size: 22px; text-align: center; margin-bottom: 20px; }
 
-.controls { margin-bottom: 20px; display: flex; gap: 10px; }
-.controls button { padding: 10px 15px; border-radius: 10px; border: none; background: var(--primary); color: white; cursor: pointer; }
+.options-group { background: rgba(0,0,0,0.03); padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: center; }
+.colors { display: flex; justify-content: center; gap: 12px; margin: 10px 0; }
+.color-dot { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: 0.2s; }
+.color-dot.active { border-color: var(--text); transform: scale(1.2); }
 
-/* الألوان والنماذج */
-.color-picker, .template-picker { text-align: center; margin-bottom: 15px; }
-.colors, .templates { display: flex; justify-content: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-.color-dot { width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; }
-.color-dot.active { border-color: var(--text); transform: scale(1.1); }
-
-.temp-btn { 
-    padding: 6px 12px; border: 1px solid var(--primary); background: transparent; 
-    color: var(--primary); border-radius: 8px; cursor: pointer; font-size: 13px;
-}
+.templates { display: flex; gap: 5px; margin-top: 10px; }
+.temp-btn { flex: 1; padding: 8px; border: 1px solid var(--primary); background: transparent; color: var(--primary); border-radius: 8px; cursor: pointer; font-size: 12px; transition: 0.3s; }
 .temp-btn.active { background: var(--primary); color: white; }
 
-/* الحقول */
-.photo-upload label { 
-    display: block; padding: 15px; border: 2px dashed var(--primary); border-radius: 12px; 
-    cursor: pointer; color: var(--primary); margin-bottom: 15px; text-align: center;
-}
-.input-box { position: relative; margin-bottom: 12px; }
+.photo-section label { display: block; padding: 12px; border: 2px dashed var(--primary); border-radius: 12px; cursor: pointer; color: var(--primary); text-align: center; margin-bottom: 15px; }
+.input-box { position: relative; margin-bottom: 15px; }
 .input-box i { position: absolute; right: 12px; top: 12px; color: var(--primary); }
-input, textarea { 
-    width: 100%; padding: 12px 40px 12px 12px; border: 1px solid var(--border); 
-    border-radius: 10px; background: var(--input-bg); color: var(--text); box-sizing: border-box;
-}
+input, textarea { width: 100%; padding: 12px 40px 12px 12px; border: 1px solid #ddd; border-radius: 10px; background: var(--input-bg); color: var(--text); box-sizing: border-box; }
 
-#submitBtn { 
-    width: 100%; padding: 15px; background: var(--primary); color: white; 
-    border: none; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 16px;
-}
+#submitBtn { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 10px; }
