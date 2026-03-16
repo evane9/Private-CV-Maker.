@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" id="htmlTag">
 <head>
@@ -17,6 +16,17 @@
 
     <div class="container">
         <h1 id="title"><i class="fas fa-file-invoice"></i> صانع السيرة الذاتية</h1>
+        
+        <div class="color-picker">
+            <span id="themeText">اختر لون السيرة:</span>
+            <div class="colors">
+                <div class="color-dot active" style="background: #27ae60;" onclick="changeTheme('#27ae60', this)"></div>
+                <div class="color-dot" style="background: #2980b9;" onclick="changeTheme('#2980b9', this)"></div>
+                <div class="color-dot" style="background: #e74c3c;" onclick="changeTheme('#e74c3c', this)"></div>
+                <div class="color-dot" style="background: #f1c40f;" onclick="changeTheme('#f1c40f', this)"></div>
+            </div>
+        </div>
+
         <form id="cvForm">
             <div class="photo-upload">
                 <label for="photoInput" id="photoLabel">
@@ -25,23 +35,10 @@
                 </label>
                 <input type="file" id="photoInput" accept="image/*" hidden>
             </div>
-
-            <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" id="name" placeholder="الاسم الكامل" required>
-            </div>
-            <div class="input-box">
-                <i class="fas fa-briefcase"></i>
-                <input type="text" id="job" placeholder="المسمى الوظيفي" required>
-            </div>
-            <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-            </div>
-            <div class="input-box">
-                <i class="fas fa-pen-nib"></i>
-                <textarea id="about" placeholder="نبذة عنك وعن مهاراتك" rows="4"></textarea>
-            </div>
+            <div class="input-box"><i class="fas fa-user"></i><input type="text" id="name" placeholder="الاسم الكامل" required></div>
+            <div class="input-box"><i class="fas fa-briefcase"></i><input type="text" id="job" placeholder="المسمى الوظيفي" required></div>
+            <div class="input-box"><i class="fas fa-envelope"></i><input type="email" id="email" placeholder="البريد الإلكتروني" required></div>
+            <div class="input-box"><i class="fas fa-pen-nib"></i><textarea id="about" placeholder="نبذة عنك" rows="4"></textarea></div>
             <button type="submit" id="submitBtn"><i class="fas fa-download"></i> تحميل PDF</button>
         </form>
     </div>
