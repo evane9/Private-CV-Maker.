@@ -1,1 +1,22 @@
+# 📝 Private-CV-Maker
 
+A professional, high-performance web application designed to generate professional CVs/Resumes while prioritizing absolute user privacy.
+
+### ✨ Key Features:
+- **100% Privacy-First:** No personal data is ever stored on a database or sent to any external server.
+- **Client-Side Generation:** All PDF processing happens locally in your browser.
+- **Instant PDF Download:** Generate a clean, formatted PDF with a single click.
+- **Minimalist Design:** A clean and responsive interface for a smooth user experience.
+
+### 🛠️ Tech Stack:
+- **Frontend:** HTML5, CSS3 (Custom Styles)
+- **Logic:** Vanilla JavaScript (ES6+)
+- **Library:** [jsPDF](https://github.com/parallax/jsPDF) for high-quality document generation.
+
+### 🚀 How to Use:
+1. Open the application in your browser.
+2. Fill in your professional details (Name, Skills, Experience).
+3. Click "Generate PDF" to download your ready-to-use resume instantly.
+
+---
+*Built with ❤️ by [evane9](https://github.com/evane9) - Committed to safe and secure software.*
