@@ -18,12 +18,21 @@
         <h1 id="title"><i class="fas fa-file-invoice"></i> صانع السيرة الذاتية</h1>
         
         <div class="color-picker">
-            <span id="themeText">اختر لون السيرة:</span>
+            <span id="themeText">اختر اللون:</span>
             <div class="colors">
                 <div class="color-dot active" style="background: #27ae60;" onclick="changeTheme('#27ae60', this)"></div>
                 <div class="color-dot" style="background: #2980b9;" onclick="changeTheme('#2980b9', this)"></div>
                 <div class="color-dot" style="background: #e74c3c;" onclick="changeTheme('#e74c3c', this)"></div>
                 <div class="color-dot" style="background: #f1c40f;" onclick="changeTheme('#f1c40f', this)"></div>
+            </div>
+        </div>
+
+        <div class="template-picker">
+            <span id="tempText">شكل السيرة:</span>
+            <div class="templates">
+                <button type="button" class="temp-btn active" id="btnClassic" onclick="setTemplate('classic', this)">كلاسيكي</button>
+                <button type="button" class="temp-btn" id="btnModern" onclick="setTemplate('modern', this)">حديث</button>
+                <button type="button" class="temp-btn" id="btnCreative" onclick="setTemplate('creative', this)">إبداعي</button>
             </div>
         </div>
 
