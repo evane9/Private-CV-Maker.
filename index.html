@@ -1,1 +1,50 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro CV Maker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="controls">
+        <button onclick="toggleLanguage()" id="langBtn"><i class="fas fa-language"></i> EN</button>
+        <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <div class="container">
+        <h1 id="title"><i class="fas fa-file-invoice"></i> صانع السيرة الذاتية</h1>
+        <form id="cvForm">
+            <div class="photo-upload">
+                <label for="photoInput" id="photoLabel">
+                    <i class="fas fa-images"></i>
+                    <span id="photoText">اختر صورة من المعرض</span>
+                </label>
+                <input type="file" id="photoInput" accept="image/*" hidden>
+            </div>
+
+            <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" placeholder="الاسم الكامل" required>
+            </div>
+            <div class="input-box">
+                <i class="fas fa-briefcase"></i>
+                <input type="text" id="job" placeholder="المسمى الوظيفي" required>
+            </div>
+            <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div class="input-box">
+                <i class="fas fa-pen-nib"></i>
+                <textarea id="about" placeholder="نبذة عنك وعن مهاراتك" rows="4"></textarea>
+            </div>
+            <button type="submit" id="submitBtn"><i class="fas fa-download"></i> تحميل PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
