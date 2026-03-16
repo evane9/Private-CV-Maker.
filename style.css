@@ -1,15 +1,12 @@
-:root { --bg: #f0f2f5; --card: #ffffff; --text: #333; --primary: #27ae60; --input-bg: #fff; }
-[data-theme="dark"] { --bg: #121212; --card: #1e1e1e; --text: #f0f0f0; --input-bg: #2d2d2d; }
+/* تنسيق أزرار النماذج */
+.template-picker { text-align: center; margin-bottom: 20px; }
+.templates { display: flex; justify-content: center; gap: 5px; margin-top: 10px; }
+.temp-btn { 
+    flex: 1; padding: 8px; font-size: 12px; border: 1px solid var(--primary); 
+    background: transparent; color: var(--primary); border-radius: 8px; cursor: pointer; transition: 0.3s;
+}
+.temp-btn.active { background: var(--primary); color: white; }
 
-body { background: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; display: flex; flex-direction: column; align-items: center; padding: 20px; direction: rtl; }
-.container { background: var(--card); padding: 25px; border-radius: 20px; width: 100%; max-width: 420px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-.color-picker { text-align: center; margin-bottom: 20px; }
-.colors { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
-.color-dot { width: 25px; height: 25px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: 0.3s; }
-.color-dot.active { border-color: var(--text); transform: scale(1.2); }
-.photo-upload label { display: block; padding: 15px; border: 2px dashed var(--primary); border-radius: 12px; cursor: pointer; color: var(--primary); margin-bottom: 15px; text-align: center; }
-.input-box { position: relative; margin: 10px 0; }
-.input-box i { position: absolute; right: 12px; top: 12px; color: var(--primary); }
-input, textarea { width: 100%; padding: 12px 40px 12px 12px; border: 1px solid #ddd; border-radius: 10px; background: var(--input-bg); color: var(--text); box-sizing: border-box; }
-button { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
-.controls { margin-bottom: 20px; display: flex; gap: 15px; }
+/* تحسينات عامة */
+.input-box i { z-index: 5; }
+textarea { resize: none; }
