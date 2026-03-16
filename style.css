@@ -1,42 +1,15 @@
-:root {
-    --bg: #f0f2f5; --card: #ffffff; --text: #333; --primary: #27ae60; --input-bg: #fff;
-}
-[data-theme="dark"] {
-    --bg: #121212; --card: #1e1e1e; --text: #f0f0f0; --primary: #2ecc71; --input-bg: #2d2d2d;
-}
+:root { --bg: #f0f2f5; --card: #ffffff; --text: #333; --primary: #27ae60; --input-bg: #fff; }
+[data-theme="dark"] { --bg: #121212; --card: #1e1e1e; --text: #f0f0f0; --input-bg: #2d2d2d; }
 
-body { 
-    background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; 
-    transition: 0.3s; display: flex; flex-direction: column; align-items: center; padding: 20px; direction: rtl; 
-}
-
-.container { 
-    background: var(--card); padding: 30px; border-radius: 20px; width: 100%; max-width: 420px; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-}
-
-.controls { margin-bottom: 20px; display: flex; gap: 15px; }
-
-/* تنسيق زر رفع الصورة (أيقونة الڤرولي) */
-.photo-upload { margin-bottom: 20px; text-align: center; }
-.photo-upload label { 
-    display: inline-block; padding: 15px 25px; border: 2px dashed var(--primary); 
-    border-radius: 12px; cursor: pointer; color: var(--primary); transition: 0.3s;
-}
-.photo-upload label:hover { background: var(--primary); color: white; }
-.photo-upload i { font-size: 24px; display: block; margin-bottom: 5px; }
-
-.input-box { position: relative; margin: 15px 0; }
+body { background: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; display: flex; flex-direction: column; align-items: center; padding: 20px; direction: rtl; }
+.container { background: var(--card); padding: 25px; border-radius: 20px; width: 100%; max-width: 420px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+.color-picker { text-align: center; margin-bottom: 20px; }
+.colors { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+.color-dot { width: 25px; height: 25px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: 0.3s; }
+.color-dot.active { border-color: var(--text); transform: scale(1.2); }
+.photo-upload label { display: block; padding: 15px; border: 2px dashed var(--primary); border-radius: 12px; cursor: pointer; color: var(--primary); margin-bottom: 15px; text-align: center; }
+.input-box { position: relative; margin: 10px 0; }
 .input-box i { position: absolute; right: 12px; top: 12px; color: var(--primary); }
-
-input, textarea { 
-    width: 100%; padding: 12px 40px 12px 12px; border: 1px solid #ddd; border-radius: 10px; 
-    background: var(--input-bg); color: var(--text); box-sizing: border-box; font-size: 16px;
-}
-
-button { 
-    cursor: pointer; border: none; border-radius: 10px; padding: 12px 25px; 
-    background: var(--primary); color: white; font-weight: bold; transition: 0.3s; 
-}
-
-#submitBtn { width: 100%; margin-top: 15px; font-size: 18px; }
+input, textarea { width: 100%; padding: 12px 40px 12px 12px; border: 1px solid #ddd; border-radius: 10px; background: var(--input-bg); color: var(--text); box-sizing: border-box; }
+button { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
+.controls { margin-bottom: 20px; display: flex; gap: 15px; }
